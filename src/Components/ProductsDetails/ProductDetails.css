@@ -1,0 +1,55 @@
+.detailsPage{
+    display: flex;
+    width: 90%;
+    margin :auto;
+    height: 650px;
+   background-image: url("https://img.freepik.com/free-vector/watercolor-stains-abstract-background_23-2149107181.jpg?w=2000");
+  }
+  
+  .leftPart{
+    margin-left: 12%;
+    width: 28%;
+    height: 550px;
+    margin-top: 4%;
+   
+  } 
+  
+  .rightPart{
+    margin-left: 3%;
+    width: 38%;
+    height: 500px;
+    margin-top: 10%;
+    text-align: center;
+  }
+  
+  #price{
+    font-weight: bolder;
+    margin-bottom: 8%;
+    font-size: 50px;
+    color: rgb(6, 65, 88);
+  }
+  
+  #cartButton{
+    width: 170px;
+    height: 54px;
+    font-size: 18px;
+    margin-top: 8%;
+    padding: 1.5% 4%;
+    background-color: rgb(14, 72, 99);
+    color: white;
+  }
+  #wishlist{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+  }
+  
+
+  #wishlist:hover{
+    padding: 20px;
+    border-radius: 30px;
+    background-color: greenyellow;
+    color: black;
+    font-size: large;
+  }

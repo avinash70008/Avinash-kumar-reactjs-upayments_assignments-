@@ -1,0 +1,18 @@
+#nav{
+    background-color:blueviolet;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+ul{
+    padding: 10px;
+    display: inline-flex;
+    list-style: none;
+}
+li{
+    padding: 10px;
+    margin-left: 10px;
+
+    color: white;
+
+}
