@@ -16,30 +16,11 @@ export const ProductDetails = () => {
     const {_id} = useParams()
     const navigate = useNavigate();
     const [data ,setData] = useState([])
-    // const [BackendCart ,SetBackendCart] = useState([])
-//     let BackendCart = []
-// const handleCart=()=>{
-//     navigate("/cart")
-// }
+
 
 
     
-    // useEffect(()=>{
-        
-        // axios.get("https://avinashbrandhub.herokuapp.com/cart").then((data)=>{
-        //     console.log("useEffect", data.data)
-
-        //     let ans = data.data
-        //     BackendCart = ans
-           
-        //    })
-
-
-
-
-
-    // }, [])
-    //https://avinashbrandhub.herokuapp.com
+ 
 
     useEffect(()=>{getData()},[])
 
@@ -55,36 +36,21 @@ export const ProductDetails = () => {
 
    
 
-    function handlewishlist(el){
+    // function handlewishlist(el){
       
-     console.log("cliked me")
-    //     let temp =   BackendCart.filter((elem)=>{
-    //            if(elem._id==el._id){
-    //                return elem
-             }
-              
-               
-    //       })
-    //       console.log("temo", temp)
-    //     if(temp.length==0){
-     
-
-    //        axios.post("https://avinashbrandhub.herokuapp.com/cart", el).then((response)=>{
-    //         console.log("backend from line 58", response.data._id)
-    //         alert("Product Added in the cart")
-       
-        
-           
-    //        })   
-    //          setToogle(false)
-        
-    //     }
-    //     else{
-    //         alert("Item is already in the cart!!")
-    //     }
-  
+    //  console.log("cliked me")
+    //  arr.push(el);
+    //  localStorage.setItem("cartData",JSON.stringify(arr));
+    //  navigate("/cart")
     // }
-    
+
+    var arr = JSON.parse(localStorage.getItem("cartData")) || []
+    const handlewishlist = (el)=>{
+       
+        arr.push(el);
+        localStorage.setItem("cartData",JSON.stringify(arr));
+      alert("product is Added in Wishlist")
+  }
 
     return(
 
@@ -104,7 +70,9 @@ export const ProductDetails = () => {
                  <h3>Discription: {el.description}</h3>
                  <h3>Category: {el.category}</h3>
                     <h1 id="price"> Rs . {el.price}</h1>
-                   <button id="wishlist" onClick={handlewishlist}>Add to Wishlist</button>
+                 
+                    <button id="wishlist" onClick={()=>handlewishlist(el)}>Add to Wishlist</button>
+                
 
                   { 
                     
