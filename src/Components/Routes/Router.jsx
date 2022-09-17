@@ -3,7 +3,10 @@ import {Routes , Route} from "react-router"
 import Home from '../Home/Home';
 import { LoginApp } from '../Login/Login';
 
-import { Additems } from '../Pages/Additems';
+import CreateProduct from '../Pages/CreateProducts';
+
+
+
 import { Wishlist } from '../Pages/Wishlist';
 
 
@@ -23,7 +26,7 @@ export const AllRoutes =() => {
         <Routes>
 
             <Route path ="/" element ={<Home />}/>
-           <Route path ="/additems" element ={<Additems />}/>
+           <Route path ="/additem" element ={<CreateProduct />}/>
            
             <Route path ="/wishlist" element ={<Wishlist />}/>
             <Route path ="/product" element ={<Product />}/>
