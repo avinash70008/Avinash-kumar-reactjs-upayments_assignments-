@@ -66,9 +66,9 @@
    
   }
   #mycart{
-    margin-top: 2%;
-    margin-bottom: 3%;
+
     font-size: 33px;
+    background-color: #F0E4E4;
   }
   
   
@@ -80,4 +80,9 @@
     background-color: rgb(8, 94, 41);
     color: white;
   }
-  
+   
+  #wsh{
+    border: 1px solid black;
+   
+    background-color:#F0E4E4;
+  }

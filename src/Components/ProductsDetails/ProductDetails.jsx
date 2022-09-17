@@ -36,21 +36,19 @@ export const ProductDetails = () => {
 
    
 
-    // function handlewishlist(el){
-      
-    //  console.log("cliked me")
-    //  arr.push(el);
-    //  localStorage.setItem("cartData",JSON.stringify(arr));
-    //  navigate("/cart")
-    // }
+  
 
     var arr = JSON.parse(localStorage.getItem("cartData")) || []
     const handlewishlist = (el)=>{
-       
+     
         arr.push(el);
+      
+       
         localStorage.setItem("cartData",JSON.stringify(arr));
       alert("product is Added in Wishlist")
+      setToogle(false)
   }
+
 
     return(
 
@@ -71,7 +69,12 @@ export const ProductDetails = () => {
                  <h3>Category: {el.category}</h3>
                     <h1 id="price"> Rs . {el.price}</h1>
                  
-                    <button id="wishlist" onClick={()=>handlewishlist(el)}>Add to Wishlist</button>
+{
+toogle ?
+<button id="wishlist" onClick={()=>handlewishlist(el)}>Add to Wishlist</button>
+: <button id="wishlist" type="button" disabled>Already Added</button>
+}
+                   
                 
 
                   { 

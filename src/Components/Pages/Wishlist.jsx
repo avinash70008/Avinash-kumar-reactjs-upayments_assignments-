@@ -17,7 +17,7 @@ export const Wishlist = ()=>{
 
         <>
         <h1 id="mycart">MY WishList Products</h1>
-        <div >
+        <div id="wsh" >
          {cartData.map((el,index)=>(
 
             <div key={index} className="flexdiv">
