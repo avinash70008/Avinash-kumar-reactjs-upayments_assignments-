@@ -2,15 +2,15 @@ import * as actionTypes from "../../Redux/CreatePro/actionType";
 import axios from "axios";
 const apiUrlHeader = `https://upayments-studycase-api.herokuapp.com/api/products`;
 
-// export const getCategories = () => async (dispatch) => {
-//   try {
-//     await axios.get(apiUrlHeader + `categories/`).then((response) => {
-//       dispatch({ type: actionTypes.GET_CATEGORIES, categories: response.data });
-//     });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+export const getCategories = () => async (dispatch) => {
+  try {
+    await axios.get(apiUrlHeader + `categories/`).then((response) => {
+      dispatch({ type: actionTypes.GET_CATEGORIES, categories: response.data });
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const clearProducts = () => async (dispatch) => {
   try {

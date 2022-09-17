@@ -61,15 +61,15 @@ const CreateProduct = () => {
     dispatch(getProducts());
   };
 
-  // useEffect(() => {
-  //   dispatch(getCategories());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(getCategories());
+  }, [dispatch]);
 
   return (
     <Modal show={true} onHide={handleShowCreateModal} backdrop='static' keyboard={false}>
-      <Modal.Header closeButton>
+      <Modal.Header>
         {/* <img className='rounded-circle' src={logo} alt='logo' width='40' height='38' style={{ marginRight: `20px` }} />{" "} */}
-        <Modal.Title>UPayments</Modal.Title>
+        <Modal.Title><h1>UPayments</h1></Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <div className='text-center pageBody'>
@@ -114,23 +114,15 @@ const CreateProduct = () => {
                   <label htmlFor='formImageUrl'>Image URL</label>
                 </div>
                 <br />
-                <div className='form-floating'>
-                  <Dropdown>
-                    <Dropdown.Toggle
-                      variant='secondary'
-                      id='dropdown-basic'
-                      style={{ fontSize: `16px`, width: "459px" }}>
-                      {category || "Categories"}
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu className='shadow pl-3 pr-3 bg-body rounded' style={{ width: "459px" }}>
-                      {categories.map(({ id, name }) => (
-                        <Dropdown.Item key={id} onClick={() => handleCategory(name)}>
-                          {name}
-                        </Dropdown.Item>
-                      ))}
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </div>
+                <input
+                    type='url'
+                    className='form-control'
+                    id='formImageUrl'
+                    placeholder={category || "Category"}
+                    onChange={(e) => handleCategory(e.target.value)}
+                    required
+                  />
+                  <label htmlFor='formImageUrl'>Category</label>
                 <br />
                 <div className='form-floating'>
                   <input
